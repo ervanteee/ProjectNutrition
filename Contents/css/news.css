@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Viga&display=swap');
+
+.bg-news{
+    background-color: bisque;
+}
+.img-adjust{
+    width: auto;
+    height: auto;
+}
+
+.font-viga{
+font-family: "Viga", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  list-style: none;
+}
+
+.small-viga{
+    color: #00695c;
+  font-family: "Viga", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card-body{
+    height: 25vh;
+    padding: 16px;
+   
+}
+
+.card-text{
+  color: #00695c;
+  font-family: "Viga", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-nunito{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.font-nunito-head{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+.wrapper-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background-color: #00695c;
+}
+
+
+.form-feedback{
+    height:300px;
+    width:90%;
+}

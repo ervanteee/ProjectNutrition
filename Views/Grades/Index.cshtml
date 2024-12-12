@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ProjectNutrition.Models.Grade>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Grade</h2>
+    <div class="mb-3">
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+    </div>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Grade1)</th>
+                <th>@Html.DisplayNameFor(model => model.SugarContent)</th>
+                <th>@Html.DisplayNameFor(model => model.FatContent)</th>
+                <th>@Html.DisplayNameFor(model => model.LabelRequirments)</th>
+                <th>@Html.DisplayNameFor(model => model.Description)</th>
+                <th>@Html.DisplayNameFor(model => model.Admin)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Grade1)</td>
+                    <td>@Html.DisplayFor(modelItem => item.SugarContent)</td>
+                    <td>@Html.DisplayFor(modelItem => item.FatContent)</td>
+                    <td>@Html.DisplayFor(modelItem => item.LabelRequirments)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Admin)</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Grade1 }, new { @class = "btn btn-warning btn-sm" })
+                            @Html.ActionLink("Details", "Details", new { id = item.Grade1 }, new { @class = "btn btn-info btn-sm" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Grade1 }, new { @class = "btn btn-danger btn-sm" })
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

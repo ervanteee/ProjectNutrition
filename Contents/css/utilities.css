@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.logo-nav{
+    max-height: 4.5em;
+    width: auto;
+}
+
+.nav-ml{
+    margin-left: auto !important;
+}
+
+.nav-adjust{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.font-nav{
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.font-session {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.btn-login{
+    background-color: rgb(8, 247, 47) !important;
+    border-radius: 130px !important;
+    padding: 10px 40px;
+    border-color: transparent;
+    font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+footer{
+    height: 40vh;
+}
+
+.about-us{
+    font-weight: 800;
+}
+
+.link-none{
+    text-decoration: none;
+    color: black;
+}
+
+.logo-footer{
+    margin: 18px 0px 5px;
+    max-height: 13em;
+    width: auto;
+}
+
+.btn-logout {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.875rem !important;
+    border-radius: 0.2rem !important;
+    background-color: #ff4d4d !important;
+    border-color: #ff4d4d !important;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .btn-logout:hover {
+        background-color: #e60000 !important;
+        border-color: #e60000 !important;
+    }
+
+
+.partner-logos img {
+    max-width: 100px; /* Adjust the size as needed */
+    margin: 5px;
+}
+
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

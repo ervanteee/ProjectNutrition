@@ -1,0 +1,65 @@
+﻿@model ProjectNutrition.Models.Grade
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Delete Grade</h2>
+
+    <h3 class="text-danger">Are you sure you want to delete this?</h3>
+    <div class="card">
+        <div class="card-header">
+            <h4>Grade Details</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.SugarContent)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.SugarContent)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.FatContent)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.FatContent)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.LabelRequirments)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.LabelRequirments)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Admin)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Admin)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "mt-4" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary ml-2" })
+        </div>
+    }
+</div>

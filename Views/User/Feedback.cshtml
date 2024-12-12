@@ -1,0 +1,75 @@
+﻿@model ProjectNutrition.Models.Feedback
+
+@section CustomStyles {
+    <link rel="stylesheet" href="~/Contents/css/news.css">
+    <style>
+        .form-feedback {
+            height: 300px;
+            width: 100%;
+            resize: vertical;
+        }
+
+        .feedback-container {
+            background: wheat;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .feedback-heading {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .feedback-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .feedback-button {
+            background-color: #ff4d4d;
+            border-color: #ff4d4d;
+        }
+
+            .feedback-button:hover {
+                background-color: #e60000;
+                border-color: #e60000;
+            }
+
+        .feedback-row {
+            margin-bottom: 20px;
+        }
+    </style>
+}
+
+@{
+    ViewBag.Title = "Feedback";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="feedback-container mb-5">
+            <h2 class="text-center feedback-heading">Feedback</h2>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.Username)
+
+            <div class="feedback-row row justify-content-center">
+                <div class="col-md-8">
+                    <label for="Comment" class="feedback-label"></label>
+                    @Html.EditorFor(model => model.Comment, new { htmlAttributes = new { @class = "form-control form-feedback", @placeholder = "Enter your feedback here..." } })
+                    @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="feedback-row row justify-content-center">
+                <div class="col-md-8 d-flex justify-content-end">
+                    <input type="submit" value="Submit Feedback" class="btn feedback-button btn-lg px-5" />
+                </div>
+            </div>
+        </div>
+    }
+</div>

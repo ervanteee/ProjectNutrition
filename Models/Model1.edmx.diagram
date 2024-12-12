@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4964108ab77c4ff4a07f091242b1a25c" Name="Diagram1">
+        <EntityTypeShape EntityType="Nutrition_DBModel.Admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Nutrition_DBModel.Drink" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Nutrition_DBModel.Feedback" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Nutrition_DBModel.Food" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Nutrition_DBModel.Grade" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Nutrition_DBModel.sysdiagram" Width="1.5" PointX="5.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Nutrition_DBModel.User" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="Nutrition_DBModel.FK_Drinks_Admin" ManuallyRouted="false" />
+        <AssociationConnector Association="Nutrition_DBModel.FK_Foods_Admin" ManuallyRouted="false" />
+        <AssociationConnector Association="Nutrition_DBModel.FK_Drinks_Grade" ManuallyRouted="false" />
+        <AssociationConnector Association="Nutrition_DBModel.FK_Feedback_User" ManuallyRouted="false" />
+        <AssociationConnector Association="Nutrition_DBModel.FK_Foods_Grade" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

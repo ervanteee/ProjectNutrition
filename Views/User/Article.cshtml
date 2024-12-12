@@ -1,0 +1,69 @@
+﻿
+@section CustomStyles {
+    <link rel="stylesheet" href="~/Contents/css/news.css">
+}
+@{
+    ViewBag.Title = "Article";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="bg-news">
+    <div class="container  pb-5 pt-5">
+        <div class="col-md-12 col-lg-12 col-sm-12 text-center latest_in_healthy">
+            <h3 class="font-viga">Latest in Live Healthy</h3>
+            <small class="font-viga small-viga">Let's BEAT Diabetes</small>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-6 mb-4">
+                <div class="card">
+                    <a href="@Url.Action("ArticleDetail", "User")">
+                        <img class="card-img-top img-adjust img-fluid" src="~/Contents/img/news_1.jpg" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                            @Html.ActionLink("“Mornings Are the Best Time to Exercise” and Other Myths", "ArticleDetail", "User", new { @class = "font-viga card-text" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-6">
+                <div class="card">
+                    <img class="card-img-top img-adjust img-fluid" src="~/Contents/img/news_2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text font-viga">Services and Support for Parents</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-6">
+                <div class="card">
+                    <img class="card-img-top img-adjust img-fluid" src="~/Contents/img/news_3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text font-viga">Keep Germs Away</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-6">
+                <div class="card">
+                    <img class="card-img-top img-adjust img-fluid" src="~/Contents/img/news_4.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text font-viga">Different Spectacle Lenses</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-6">
+                <div class="card">
+                    <img class="card-img-top img-adjust img-fluid" src="~/Contents/img/news_5.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text font-viga">Plan Your Meals with My Healthy Plate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-6">
+                <div class="card">
+                    <img class="card-img-top img-adjust img-fluid" src="~/Contents/img/news_6.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text font-viga">Outdoor Activities for Your Children</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

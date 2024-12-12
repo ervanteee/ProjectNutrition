@@ -1,0 +1,106 @@
+body {
+    background: radial-gradient(ellipse at top, #3d3393 0%, transparent),
+    radial-gradient(ellipse at bottom, #2b76b9 37%, transparent),
+    radial-gradient(ellipse at left, #2cacd1 65%, transparent),
+    radial-gradient(ellipse at right, #35eb93 100%, transparent);
+    background-size: 100%;
+    background-position: top, bottom;
+    height: 100vh; /* Ensures the body takes the full viewport height */
+    margin: 0; /* Removes any default margin */
+    position: relative;
+    overflow: hidden;
+}
+
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: float 7s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.bubble1 {
+    background: radial-gradient(ellipse at top, #3d3393 20%, transparent);
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 10%;
+}
+
+.bubble2 {
+    background: radial-gradient(ellipse at bottom, #2b76b9 7%, transparent);
+    width: 300px;
+    height: 300px;
+    top: 30%;
+    left: 70%;
+}
+
+.bubble3 {
+    background:  radial-gradient(ellipse at bottom, #35eb93 15%, transparent);
+    width: 150px;
+    height: 150px;
+    top: 80%;
+    left: 30%;
+}
+
+.base_form{
+    height: 500px;
+    max-width: 420px !important;
+    border-radius: 50px 50px 50px 50px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(0, 255, 136, 0.3));
+}
+
+.welcome-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.welcome-head{
+    letter-spacing: -2px;
+    font-weight: 700;
+    margin-bottom: 0.4em;
+    text-shadow: 2px 2px #2cc47b;
+}
+
+.welcome-text{
+    text-shadow: 1px 1px black;
+}
+.seperate{
+    text-align: center;
+}
+
+.login{
+    font-weight: 700;
+}
+
+.form-control{
+    border-radius: 50px 50px 50px 50px !important;
+}
+
+.input-icons {
+    position: relative;
+}
+
+.input-icons i {
+    position: absolute;
+    top: 18%;
+    right: 17%;
+    color: #aaa;
+}
+
+.btn{
+    width:140px;
+    border-radius: 50px 50px 50px 50px !important;
+}
+

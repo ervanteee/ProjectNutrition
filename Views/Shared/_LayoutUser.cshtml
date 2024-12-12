@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Contents/css/utilities.css">
+    <link rel="stylesheet" href="~/Contents/bootstrap/css/bootstrap.min.css">
+    @RenderSection("CustomStyles", required: false)
+    <title>@ViewBag.Title</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="~/Contents/img/logo_nutrition.png" alt="logo" class="logo-nav">
+            </a>
+            <div class="" id="navbarNavAltMarkup">
+                <div class="navbar-nav nav-ml">
+                    @if (Session["UsernameUser"] != null)
+                    {
+                        <span class="navbar-text me-4 font-session">@Session["UsernameUser"]</span>
+                        @Html.ActionLink("Logout", "Logout", "User", new { @class = "btn btn-logout link-none ml-3" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Login", "Login", "User", new { @class = "btn-login link-none" })
+                    }
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto font-nav">
+                    @Html.ActionLink("Home", "Index", "User", new { @class = "nav-item nav-link active mx-5" })
+                    @Html.ActionLink("Product", "Product", "User", new { @class = "nav-item nav-link mx-5" })
+                    @Html.ActionLink("News", "Product", "User", new { @class = "nav-item nav-link mx-5" })
+                    @Html.ActionLink("Article", "Article", "User", new { @class = "nav-item nav-link mx-5" })
+                    @Html.ActionLink("Feedback", "Feedback", "User", new { @class = "nav-item nav-link mx-5" })
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <hr>
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="d-flex justify-content-center align-items-center mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <img src="~/Contents/img/logo_nutrition.png" alt="logo" class="logo-footer">
+                    </div>
+                </div>
+                <div class="col-3 me-5">
+                    <div>
+                        <h5 class="our-app about-us">About Us</h5>
+                        <hr>
+                        @Html.ActionLink("Contact Us", "Contact", "User", new { @class = "link-none" })
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h5 class="our-app">In Partnership With</h5>
+                        <div class="partner-logos">
+                            <img src="~/Contents/img/logo_bsdsn.png" alt="BSD SN logo" />
+                            <img src="~/Contents/img/logo_health_singapore.png" alt="Health Singapore logo" />
+                            <img src="~/Contents/img/logo_kemenkes.png" alt="Kemenkes logo" />
+                            <img src="~/Contents/img/logo_puskesmas.png" alt="Puskesmas logo" />
+                            <img src="~/Contents/img/logo_siloam.png" alt="Siloam logo" />
+                            <img src="~/Contents/img/logo_ui.png" alt="UI logo" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

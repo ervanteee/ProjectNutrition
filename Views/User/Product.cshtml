@@ -1,0 +1,56 @@
+﻿@model ProjectNutrition.Models.ViewModel
+
+@section CustomStyles {
+    <link rel="stylesheet" href="~/Contents/css/news.css">
+}
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="bg-news">
+    <div class="container pb-5 pt-5">
+        <div class="col-md-12 col-lg-12 col-sm-12 text-center latest_in_healthy">
+            <h3 class="font-viga mb-5">Products Grade</h3>
+        </div>
+        <div class="row mt-3">
+            @foreach (var drink in Model.Drinks)
+            {
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-6 mb-4">
+                    <div class="card">
+                        <div href="news-detail.html">
+                            <img class="card-img-top img-fluid" src="@Url.Content("~/Contents/Images/" + drink.Img_Path)" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <div class="font-viga">
+                                <h5 class="card-title">@drink.Name</h5>
+                                <p class="card-text">@drink.Company</p>
+                                <p class="card-text">Grade: @drink.Grade</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            }
+        </div>
+        <div class="row mt-3">
+            @foreach (var food in Model.Foods)
+            {
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-6 mb-4">
+                    <div class="card">
+                        <a href="news-detail.html">
+                            <img class="card-img-top img-fluid" src="@Url.Content("~/Contents/Images/" + food.Img_Path)" alt="Card image cap">
+                        </a>
+                        <div class="card-body ">
+                            <div class="font-viga">
+                                <h5 class="card-title">@food.Name</h5>
+                                <p class="card-text">@food.Company</p>
+                                <p class="card-text">Grade: @food.Grade</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "AdminDashboard";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>AdminDashboard</h2>
+
+<fieldset>
+    <legend></legend>
+    @if (Session["username"] != null)
+    {
+        <text>
+            Welcome @Session["nama"].ToString() |
+            @Html.ActionLink("Logout", "Logout")
+        </text>
+    }
+</fieldset>

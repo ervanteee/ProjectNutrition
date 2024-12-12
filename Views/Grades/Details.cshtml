@@ -1,0 +1,59 @@
+﻿@model ProjectNutrition.Models.Grade
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Grade Details</h2>
+
+    <div class="card">
+        <div class="card-header">
+            <h4>Grade Information</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.SugarContent)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.SugarContent)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.FatContent)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.FatContent)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.LabelRequirments)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.LabelRequirments)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Admin)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Admin)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Grade1 }, new { @class = "btn btn-primary" }) |
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
+    </div>
+</div>

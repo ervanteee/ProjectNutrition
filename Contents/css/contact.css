@@ -1,0 +1,44 @@
+.bg-wrapper{
+background-color: #3B38CD;
+width: 100%;
+}
+
+.padding-card{
+    padding: 7% 0;
+}
+
+.wrapper{
+    height: auto;
+}
+
+.hr{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.contact-img{
+    max-width: 40em !important;
+    height: auto;
+}
+
+.contact-details{
+    text-align: justify;
+}
+
+footer{
+    height: 40vh;
+}
+
+.about-us{
+    font-weight: 800;
+}
+
+.link-none{
+    text-decoration: none;
+    color: black;
+}
+
+.logo-footer{
+    margin: 18px 0px 5px;
+    max-height: 13em;
+    width: auto;
+}
